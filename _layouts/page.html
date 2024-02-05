@@ -39,6 +39,7 @@ layout: default
     {% endunless %}
 
 
+    {% unless page.editme == false %}
     {% if site.github_editme_path %}
 
    <!-- Original "Edit me" link for a general theme use -->
@@ -46,9 +47,9 @@ layout: default
    
    <!-- Corrected "Edit me" link for the case when all markdown files are in the '_docs' folder -->
     <a target="_blank" href="https://github.com/{{site.github_editme_path}}{{page.url | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
-
    
     {% endif %}
+    {% endunless %}
 
   {{content}}
 
