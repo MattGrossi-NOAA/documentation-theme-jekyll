@@ -5,13 +5,13 @@ $('#mysidebar').height($(".nav").height());
 
 $( document ).ready(function() {
 
-    //this script says, if the height of the viewport is greater than 800px, then insert affix class, which makes the nav bar float in a fixed
+    // this script says, if the height of the viewport is greater than 800px, then insert affix class, which makes the nav bar float in a fixed
     // position as your scroll. if you have a lot of nav items, this height may not work for you.
     var h = $(window).height();
     //console.log (h);
 
-    // in addition to browser height, check that the repo is not in the custom list of IOOS documentation repos
-    //to exclude from fixing sidenav positiod.  Could use .includes but it isn't IE-compatible:
+    // in addition to browser height, check that the repo is not in the custom list of documentation repos
+    // to exclude from fixing sidenav position.  Could use .includes but it isn't IE-compatible:
     //if ( (h > 800) && (!(navbarFixedPositionExcludedRepos.includes("{{ site.repository }}"))) ) {
     if ( (h > 800) && (!(navbarFixedPositionExcludedRepos.indexOf("{{ site.repository }}") > -1)) ) {
         $( "#mysidebar" ).attr("class", "nav affix");
