@@ -337,9 +337,9 @@ li.dropdownActive a {
 footer {
     font-size: smaller;
     font-family : Roboto, sans-serif;
-    background-image: url("../images/bg_footer.png");
+    /* background-image: url("../images/bg_footer.png"); */
     color: #fff;
-    background-color: #011a49;
+    background-color: #00467F;
     background-position: top center;
     background-size: cover;
     /*height: 330px;*/
